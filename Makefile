@@ -1,5 +1,5 @@
 VERSION=latest
-NAME=luna-client
+NAME=jenkins
 
 all: build push
 build:
