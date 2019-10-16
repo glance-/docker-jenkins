@@ -17,7 +17,7 @@ USER jenkins
 # Pre-install and upgrade the relevant plugins
 # pam-auth git-client ant matrix-auth script-security are plugins we want to upgrade to latest
 # cloudbees-folder is needed by modern packages, and can anso be used to sort jobs into folders
-# envinject slack git github copyartifact docker-build-publish docker-custom-build-environment managed-scripts publish-over-ssh ws-cleanup are things we use in our jobs
+# envinject slack git github copyartifact managed-scripts publish-over-ssh are things we use in our jobs
 # docker-plugin is not required yet, but I'm planning to use it.
 # configuration-as-code is to replace checked in xml
 # greenballs is nice, and more intuative than blue balls
@@ -28,4 +28,4 @@ USER jenkins
 # authorize-project is needed to set which user to run jobdsl as, when running in secure sandbox
 # pipeline-utility-steps is extra steps to use in pipeline, such as readYaml
 # ansicolor is to produce colors and correct interpetation of ansi-codes in build logs
-RUN /usr/local/bin/install-plugins.sh pam-auth git-client ant matrix-auth script-security cloudbees-folder job-dsl envinject slack git github copyartifact docker-build-publish docker-custom-build-environment managed-scripts publish-over-ssh ws-cleanup docker-plugin configuration-as-code greenballs locale hsts-filter-plugin github-oauth workflow-aggregator authorize-project pipeline-utility-steps ansicolor
+RUN /usr/local/bin/install-plugins.sh pam-auth git-client ant matrix-auth script-security cloudbees-folder job-dsl envinject slack git github copyartifact managed-scripts publish-over-ssh docker-plugin configuration-as-code greenballs locale hsts-filter-plugin github-oauth workflow-aggregator authorize-project pipeline-utility-steps ansicolor
